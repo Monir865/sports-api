@@ -1,0 +1,22 @@
+browser url :
+https://rapidapi.com/rapidsportapi/api/sportapi7/playground/apiendpoint_d8c87fb9-1eb6-43b7-a2a5-9849ae3746e3
+
+
+
+app = "default-application_9848590"
+request URL = "rapidapi.com"
+API_KEY = "e50a4582c3mshca839e3fd699ffdp1ccd5bjsn5be7f0a437fa";
+
+
+
+Scheduled Event for date:
+HttpRequest request = HttpRequest.newBuilder()
+		.uri(URI.create("https://sportapi7.p.rapidapi.com/api/v1/sport/football/scheduled-events/2022-02-11"))
+		.header("x-rapidapi-key", "e50a4582c3mshca839e3fd699ffdp1ccd5bjsn5be7f0a437fa")
+		.header("x-rapidapi-host", "sportapi7.p.rapidapi.com")
+		.method("GET", HttpRequest.BodyPublishers.noBody())
+		.build();
+HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+System.out.println(response.body());
+
+
